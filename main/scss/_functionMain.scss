@@ -1,0 +1,17 @@
+@import '../../scss/functions' ; 
+
+
+@mixin  MakeSubBtn() {
+ border: none;
+ height: 40px;
+ width: 150px;
+ background-color: getColor(two);
+ border-radius: $Borders;
+ transition: all .35s linear;
+ &:hover{
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px white;
+ }
+}
+

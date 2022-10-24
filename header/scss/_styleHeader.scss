@@ -1,0 +1,141 @@
+@import './functionHeader';
+
+
+body{
+ header{
+  background: rgba( 255, 255, 255, 0.25 );
+  backdrop-filter: blur( 4px );
+  z-index: 20;
+  @media screen and (max-width:767px) {
+    
+    .toggle , .header-icon{
+    display: none !important;
+   }
+   .SearchForm{
+    left: 0% !important; 
+    width: 90% !important;
+    button{
+     right: 15% !important;
+    }
+    .dashBored{
+     width: 75% !important;
+    }
+   }
+   .right{
+    right: 0px !important;
+    top: 10% !important;
+   }
+  }
+  @media screen and (min-width:768px ) and (max-width:992px) {
+    width: 120% !important;
+  }
+
+  .toggle{
+   margin-inline: 25px;
+   height: 25px;
+   width: 20px;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-direction: column;
+   .line{
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+   }
+  }
+  .svg-cc{
+   height: 50px;
+   width: auto;
+  }
+  .SearchForm{
+   position: relative;
+   width: 45%;
+   left:20% ; 
+   @include MakeFlex();
+   margin-left: 40px;
+   #search-bar{
+    @include StyleInput();
+    font-size: getFontSize(one);
+   }
+   button{
+    position: relative;
+    right: 7%;
+    @include MakeSearchBtn();
+   }
+   .search-space{
+    padding: 5px 10px;
+    height: fit-content;
+    width: 100%;
+    li{
+     list-style: nine;
+    }
+   }
+   .dashBored{
+    ::-webkit-scrollbar{
+      display: none !important;
+    }
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 20px;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+   // height: fit-content;
+    width: 88%;
+    //scroll-snap-type: y mandatory;
+    @include MakeGlassMorphism();
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 5px;
+    .is-hidden{
+     display: none;
+    }
+    padding: 0 10px!important;
+    li{
+      
+     list-style: none;
+     transition: all .35s linear;
+     cursor: pointer;
+     &:hover{
+      @include MakeGlassMorphism();
+      width: 100%;
+      border-radius: 5px;
+      text-align: center;
+      transform: scale(1.05);
+     }
+    }
+   }
+  }
+  .right1{
+   width: 20%;
+   @include MakeFlex();
+   justify-content: space-between;
+   position: absolute;
+   right: 50px;
+   top: 15px;
+   .header-icon{
+    width: 150px;
+    @include MakeFlex() ; 
+    justify-content: space-around;
+    li{
+     position: relative;
+     list-style: none;
+     &:nth-child(3)::before{
+      content: '';
+      position: absolute;
+      top: -3.5px;
+      right: -2px;
+      display: none;
+      height: 15px;
+      width: 15px;
+      background-color: getColor(two);
+      border-radius: 50%;
+     }
+    }
+   }
+  }
+ }
+}

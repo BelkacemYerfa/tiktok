@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+$Font :  'Mulish', sans-serif;
+$FontSizes : (
+ 'one': 26px,
+ 'two' : 16px,
+ 'three' : 14px,
+);
+$FontWeight : (
+ 'one':700,
+ 'two':400 ,
+);
+$ColorElements : (
+ "one":hsl(0 , 0 , 100%),
+ "two":#fe2c55 ,
+ "four":#C2C2C2 , 
+);
+$OpacityTextCards : .4 ; 
+$Borders : 20px ; 

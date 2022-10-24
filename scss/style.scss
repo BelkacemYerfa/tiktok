@@ -1,0 +1,62 @@
+@import './functions' ; 
+@import '../header/scss/styleHeader';
+@import '../sidebar/scss/styleSideBar';
+@import '../main/scss/styleMain';
+@import '../RightSideBar/styleRightsidebar';
+@import '../mainsearhcedcontent/stylemaincontent';
+
+
+//code section
+
+html,body{
+ ::-webkit-scrollbar {
+   width: 5px;
+  }
+ ::-webkit-scrollbar-track {
+   background: none;  
+ }
+ ::-webkit-scrollbar-thumb {
+   background: #888; 
+    border-radius: 5px ; 
+  }
+  @media screen and (max-width:767px) {
+    ::-webkit-scrollbar {
+      display: none !important;
+     }
+  }
+ }
+
+body{
+  h2{
+    margin-left: 10px;
+  }
+  a{
+    text-decoration: none;
+    color: getColor(one);
+  }
+  position: relative;
+  
+  @media screen and (max-width: 767px){
+    overflow-x: hidden;
+  }
+ svg,.toggle{
+  cursor: pointer;
+ }
+ @include Sizing();
+ font-family: $Font;
+ header{
+  position: fixed;
+  top:0%;
+  height: 80px;
+  width: 100%;
+  padding-inline: 10px;
+  @include MakeFlex() ; 
+ }
+ main{
+  display: flex;
+  
+  @media screen and (max-width:600px) {
+    flex-direction: column !important;
+  }
+ }
+}

@@ -1,0 +1,43 @@
+@import './variables';
+
+
+//functions common in every file 
+@function getColor($Color-name){
+  @return map-get($ColorElements, $Color-name);
+}
+
+@function getFontSize($FontSize-name){
+  @return map-get($FontSizes, $FontSize-name); 
+}
+
+@function getFontWeight($FontColor-name){
+ @return map-get($FontWeight , $FontColor-name) ; 
+}
+
+//also mixins and generally style
+
+@mixin Sizing() {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin MakeFlex() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin MakeGlassMorphism() {
+  background: rgba( 255, 255, 255, 0.45 );
+  box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.5 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 20px;
+}
+
+@mixin MakeGrid() {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+

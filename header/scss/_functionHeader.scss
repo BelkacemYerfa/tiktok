@@ -1,0 +1,24 @@
+@import '../../scss/variables' ; 
+
+//
+
+@mixin StyleInput() {
+  padding: 5px 10px;
+  height: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius:7.5px ;
+  text-indent: 20px;
+  box-shadow: 0px 8px 20px black;
+}
+
+@mixin MakeSearchBtn() {
+  border: none;
+  border-left: 1px solid hsl(0, 0%, 100%  , .5);
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  
+}

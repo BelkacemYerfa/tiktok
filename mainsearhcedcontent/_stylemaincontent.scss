@@ -1,0 +1,92 @@
+@import '../scss/functions';
+
+
+body{
+ height: 90vh;
+ .right{
+  .RecomendedVideos-list-video{ 
+   @media screen and (max-width:767px) {
+    width: 100% !important;
+    margin-left: -10% !important;
+    padding: 0;
+   }
+   margin-left: 10%;
+   width: 80% ;
+   @include MakeFlex();
+   gap: 30px;
+   flex-wrap: wrap;
+   .element{
+    list-style: none;
+    .linker-video{
+     .User-Video{
+      .Up-container-info{
+       .Icon-User-video{
+        margin-bottom: 15px;
+        @include MakeFlex();
+        img{
+         height: 50px;
+         width: auto;
+         border-radius: 50%;
+        }
+        .User-name-video{
+         font-size: 16px;
+        }
+       }
+      }
+      .video-component-searched{
+       .right-video-display-searched{
+        video{
+         @media screen and(max-width:767px) {
+          height:500px;
+          width: 350px;
+         }
+         height: 350px;
+         width: 200px;
+         border-radius: 10px;
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+  .Middle{
+   @media screen and (max-width:767px) {
+    display: none !important;
+   }
+   background: rgba( 255, 255, 255, 0.25 );
+   box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.5 );
+   backdrop-filter: blur( 4px );
+   -webkit-backdrop-filter: blur( 4px );
+   position: fixed;
+   right: 0px;
+   top: 80px;
+   border-radius: none !important;
+   border: none !important;
+   h2{
+    position: absolute;
+    top: 0px !important;
+   }
+  #middle{
+
+   position: absolute;
+   margin-top: 70px;
+   padding-left: 15px !important;
+   li{
+    cursor: pointer;
+    margin-block: 15px;
+    padding: 5px 15px;
+    transition: all .35s linear;
+    &:hover{
+     background: rgba( 255, 255, 255, 0.45 );
+     box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.5 );
+     backdrop-filter: blur( 4px );
+     -webkit-backdrop-filter: blur( 4px );
+     border-radius: 5px;
+     
+    }
+   }
+  }
+ }
+}

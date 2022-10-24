@@ -1,0 +1,154 @@
+@import './functionSideBar';
+
+body{
+ .left{
+  overflow-x: hidden;
+  flex: .3;
+  height: 90vh;
+  //to get the overflow of the scroll effect you need to give the container height
+  //the part it depends later
+  overflow-x: scroll;
+ 
+  @media screen and (max-width:767px){
+    transform: translateX(0%) !important ;
+  overflow-x: hidden !important;
+   bottom: 0px !important;
+   left: 0px !important;
+   top: 85% !important;
+   overflow-y: hidden !important;
+   margin: 0!important;
+   background-color: transparent !important;
+   backdrop-filter: blur( 5px ) !important;
+   border-radius: 0px !important;
+  }
+  transition: transform .35s ease-in-out;
+  transform: translateX(0%) ;
+  z-index: 10;
+  width: 25%;
+  position: fixed;
+  top: 80px;
+  @include MakeGlassMorphism();
+  border-left: none;
+  border-top: none;  
+  background: rgba( 255, 255, 255, 0.25 );
+  border-radius: 0px ;
+  @media screen and (min-width:768px) and (max-width:992px){
+   width: 20% !important;
+  }
+  @media screen and (max-width:767px) {
+   width: 100% !important;
+    .Larger{
+      flex-direction: row !important;    
+      justify-content: space-around !important;
+      
+      li{    
+        &:hover , &:focus-within{
+          background: transparent !important;
+          box-shadow: none !important;
+          border: none !important;
+          width: fit-content !important;
+         }
+       flex-direction: column;
+       a{
+        margin-block-start: 15px;
+       }
+      }
+     
+    }
+    .NotLarger,.sub-part{
+     display: none !important;
+    }
+   }
+   
+   .sideBar-icons{
+    width: 85%;
+    margin-left: -20px;
+    display: flex;
+    margin-left: -5px;
+    flex-direction: column;
+    li{
+     margin-left: -35px !important;
+     cursor: pointer;
+     margin-block: 15px;
+     padding: 10px 15px ;
+     list-style: none;
+     display: flex;
+     align-items: center;
+     .is-active{
+      color: getColor(two);
+     }
+     a{
+      font-family: $Font;
+      margin-inline: 5px;
+      font-size: calc(getFontSize(two) + 2px);
+      color: getColor(one);
+      text-decoration: none;
+      transition: all .5s linear;
+     }
+     &:hover , &:focus-within{
+      a , i{
+       color: getColor(two);       
+     }
+     @include MakeGlassMorphism();
+      width: 100%;
+      border-radius: 5px;
+      text-align: center;
+    }
+    &:hover{
+      i{
+        @include animate();
+        color: getColor(two);
+       }
+    }
+
+   }
+  }
+  .NotLarger{
+    display: flex;
+    align-items : center;
+    flex-direction:row !important ;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    li{
+      list-style: none;
+      a{       
+        margin-block: 10px;
+        margin-inline: 30px;
+        width: fit-content;
+        @include MakeGlassMorphism();
+          margin-left: -20px !important;
+          padding: 10px 15px ;
+          list-style: none;
+          display: flex;
+          align-items: center;
+          .is-active{
+           color: getColor(two);
+          }
+          a{
+           font-family: $Font;
+           margin-inline: 5px;
+           font-size: calc(getFontSize(two) + 2px);
+           color: getColor(one);
+           text-decoration: none;
+           transition: all .5s linear;
+          }
+          
+         &:hover{
+             @include animate();
+             color: getColor(two);
+         }
+         &:focus-within{
+          color: getColor(two);
+         }
+         }
+      }
+      
+      }
+   .sub-part{
+    h2{
+     font-size: getFontSize(one);
+    }
+   }
+}
+
+}

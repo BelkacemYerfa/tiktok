@@ -1,0 +1,16 @@
+@import '../../scss/variables' ; 
+
+
+@mixin animate() {
+ animation: Jumping 1s infinite linear;
+}
+
+@keyframes Jumping {
+ 33.3333334%{
+  transform: translateY(-5px);
+  
+ }
+ 66.6666666%{
+  transform: translateY(2.5px);
+ }
+}
